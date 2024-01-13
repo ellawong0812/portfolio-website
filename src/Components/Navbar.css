@@ -1,6 +1,6 @@
 .navbar {
-    background-color: #d2edf5;
-    padding: 10px;
+    background-color: #2a4249;
+    padding: 20px;
   }
   
   .navbar__nav {
@@ -22,15 +22,20 @@
   
   .navbar__link {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: 600;
     transition: color 0.3s ease;
   }
   
   .navbar__link:hover {
-    color: rgb(25, 138, 245);
+    color: black
   }
 
 .active {
     background-color: rgb(167, 200, 232);
+    color: black;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2em;
   }

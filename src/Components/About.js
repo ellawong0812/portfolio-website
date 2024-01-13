@@ -60,12 +60,12 @@ const About = () => {
         <ul>
           <li>
             <a href="https://www.credly.com/badges/23629085-fcca-454a-8abd-b09a3880a5ce/public_url">
-              🔵Microsoft Certification: Azure Fundamentals AZ-900
+              🔵 Microsoft Certification: Azure Fundamentals AZ-900
             </a>
           </li>
-          <li>🔵Software Engineer, Beijing YingKe Law Firm Tianjin Office</li>
+          <li>🔵 Software Engineer, Beijing YingKe Law Firm Tianjin Office</li>
           <li>
-            🔵Joint University Outstanding Marketing Award Session
+            🔵 Joint University Outstanding Marketing Award Session
             2022-2023--Semi-final
           </li>
         </ul>
@@ -75,28 +75,28 @@ const About = () => {
         <h2>My School Life🥰</h2>
         <ul>
           <li>
-            🔵Peer Mentor: Contributing to the school community and supporting
+            🔵 Peer Mentor: Contributing to the school community and supporting
             my mentees in their transition to university life. By sharing my
             personal experiences and offering practical tips, I enable them to
             navigate challenges, manage their time effectively, and make the
             most of available resources.
           </li>
           <li>
-            🔵Volunteer with HKUST Connect: Actively engage in various community
-            work initiatives, such as the Bread Run and Feeding Hong Kong
-            Warehouse Session organized by Feeding Hong Kong{" "}
+            🔵 Volunteer with HKUST Connect: Actively engage in various
+            community work initiatives, such as the Bread Run and Feeding Hong
+            Kong Warehouse Session organized by Feeding Hong Kong{" "}
           </li>
-          <li>🔵Spark Global Leader: </li>
+          <li>🔵 Spark Global Leader: </li>
         </ul>
 
         <div className="imageSlider">
-          <button onClick={previousImage}>Previous</button>
+          {/* <button onClick={previousImage}>Previous</button> */}
           <img
             className="sliderImage"
             src={images[currentImageIndex]}
             alt={`Image ${currentImageIndex + 1}`}
           />
-          <button onClick={nextImage}>Next</button>
+          {/* <button onClick={nextImage}>Next</button> */}
         </div>
       </section>
 
