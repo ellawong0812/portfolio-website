@@ -16,7 +16,7 @@ const Intro = () => {
               className="intro-button"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1_lGjcQQm0L8p9DDQpyEoIhdvIYXbXCCa/view?usp=sharing"
+                  "https://drive.google.com/file/d/1faOWZ7lxhI5Q_WP7_q0rsyKXO8cC49mD/view?usp=sharing"
                 )
               }
             >
