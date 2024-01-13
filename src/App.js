@@ -9,17 +9,17 @@ import Academic from './Components/Academic';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<Intro/>} />
-          <Route path='/about' element={<About/>} />
-          <Route path='/academic' element={<Academic/>} />
-          <Route path='/projects' element={<Projects/>} />
-        </Routes>
-      </div>
-    </Router>
+      <Router basename="/portfolio-website">
+        <div className="App">
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<Intro/>} />
+            <Route path='/about' element={<About/>} />
+            <Route path='/academic' element={<Academic/>} />
+            <Route path='/projects' element={<Projects/>} />
+          </Routes>
+        </div>
+      </Router>
   );
 }
 

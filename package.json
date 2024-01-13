@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ellawong0812.github.io/portfolio-website",
+  "homepage": "/portfolio-website",
   "name": "react_portfolio",
   "version": "0.1.0",
   "private": true,
@@ -19,8 +19,7 @@
     "react-scripts": "^3.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4",
-    "xlsx": "^0.18.5"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
