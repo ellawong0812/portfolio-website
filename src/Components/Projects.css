@@ -1,0 +1,96 @@
+.projects-container {
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .project-details {
+    text-align: left;
+  }
+  
+  .project-details h2 {
+    margin-bottom: 10px;
+  }
+  
+  .project-links a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .project-links a:hover {
+    background-color: #9ec3f1;
+  }
+
+  .programming-language {
+    /* Styling for the programming language box */
+    /* Add CSS styles to create the desired box effect */
+    background-color: #a1c7f1;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+  }
+
+  .library-box {
+    display: inline-block;
+    background-color: lightblue;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .language-dropdown {
+    margin-bottom: 20px;
+    background-color: #bcd4f1;
+  }
+  
+  .language-dropdown label {
+    font-weight: bold;
+    margin-right: 10px;
+    
+  }
+  
+  .language-dropdown select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid rgb(39, 191, 222);
+    background-color: #c8e3f7;
+  }
+  
