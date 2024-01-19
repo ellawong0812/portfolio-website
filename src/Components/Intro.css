@@ -1,7 +1,23 @@
 .intro-container {
     text-align: center;
     margin: 50px auto;
-    }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-class {
+  animation: slideInFromLeft 1s ease;
+  font-size: 30px;
+  color:#2d3496;
+}
   
   
   .intro-image {
@@ -12,10 +28,6 @@
     margin-right: 10px;
   }
   
-  .intro-text {
-    font-size: 30px;
-    color:#2d3496;
-  }
 
   .intro-button {
     display: inline-block;
@@ -27,6 +39,7 @@
     color: #333;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
+    margin-right: 20px;
   }
   
   .intro-button:hover {

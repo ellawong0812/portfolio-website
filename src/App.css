@@ -7,3 +7,20 @@ body {
     margin-right: 15%;
     padding-top: 60px
 }
+
+.move-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(177, 237, 216);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .move-to-top-button.visible {
+    opacity: 1;
+  }

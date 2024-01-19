@@ -8,6 +8,8 @@ import life3 from "../Assets/life3.jpg";
 import life4 from "../Assets/life4.jpg";
 import life5 from "../Assets/life5.jpg";
 import life6 from "../Assets/life6.JPG";
+import azure from "../Assets/azure.png";
+import green from "../Assets/green.png";
 
 const About = () => {
   const images = [life1, life2, life3, life4, life5, life6];
@@ -28,7 +30,7 @@ const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    }, 3000);
+    }, 1000);
     return () => {
       //clean up the interval when the component unmounts or when the currentImageIndex dependency changes
       clearInterval(interval);
@@ -56,19 +58,47 @@ const About = () => {
       </section>
 
       <section className="about-section">
+        <h2>Skills</h2>
+        <p>
+          Here are some of my skills on which I have been working on for the
+          past year.
+        </p>
+        <ul className="skills-list">
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C++</li>
+          <li>SQLite</li>
+          <li>MySQL</li>
+          <li>React JS</li>
+          <li>React Native</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </section>
+
+      <section className="about-section">
         <h2>Experience</h2>
         <ul>
-          <li>
-            <a href="https://www.credly.com/badges/23629085-fcca-454a-8abd-b09a3880a5ce/public_url">
-              🔵 Microsoft Certification: Azure Fundamentals AZ-900
-            </a>
-          </li>
+          <li>🔵 Microsoft Certification: Azure Fundamentals AZ-900</li>
+          <li>🔵 EY & Microsoft: Green Skills Passport Certification</li>
           <li>🔵 Software Engineer, Beijing YingKe Law Firm Tianjin Office</li>
+
           <li>
             🔵 Joint University Outstanding Marketing Award Session
             2022-2023--Semi-final
           </li>
         </ul>
+      </section>
+
+      <section className="about-section">
+        <h2>Certificates</h2>
+        <div className="cert_container">
+          <a href="https://www.credly.com/badges/23629085-fcca-454a-8abd-b09a3880a5ce/public_url">
+            <img class="cert1" src={azure} alt="Azure" />
+          </a>
+          <img class="cert" src={green} alt="Green" />
+        </div>
       </section>
 
       <section className="about-section">
@@ -86,7 +116,11 @@ const About = () => {
             community work initiatives, such as the Bread Run and Feeding Hong
             Kong Warehouse Session organized by Feeding Hong Kong{" "}
           </li>
-          <li>🔵 Spark Global Leader: </li>
+          <li>
+            🔵 Spark Global Events: Participating in different kind of
+            activities such as cultural tours and social events with non-local
+            students{" "}
+          </li>
         </ul>
 
         <div className="imageSlider">
@@ -98,25 +132,6 @@ const About = () => {
           />
           {/* <button onClick={nextImage}>Next</button> */}
         </div>
-      </section>
-
-      <section className="about-section">
-        <h2>Skills</h2>
-        <p>
-          Here are some of my skills on which I have been working on for the
-          past year.
-        </p>
-        <ul className="skills-list">
-          <li>Java</li>
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>SQLite</li>
-          <li>MySQL</li>
-          <li>React Js</li>
-          <li>React Native</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
       </section>
     </div>
   );
