@@ -23,7 +23,7 @@ const Intro = () => {
           <p>
             I am currently pursuing a degree in{" "}
             <strong>Information Systems + Artificial Intelligence</strong> at
-            the Hong Kong University of Science and Technology.
+            The Hong Kong University of Science and Technology.
           </p>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
