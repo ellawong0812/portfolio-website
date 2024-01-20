@@ -19,6 +19,7 @@ function App() {
   }, []);
 
   const handleScroll = () => {
+    // calculates the current scroll position
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     setIsVisible(scrollTop > 300);
   };

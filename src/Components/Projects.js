@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Projects.css";
-//import cake1 from '../Assets/cake1.png';
-import cake2 from "../Assets/cake2.png";
+import mobile from "../Assets/mobile.png";
 import USElection from "../Assets/USElection.png";
 import tictactoe from "../Assets/tictactoe.png";
 import extractFileInfo from "../Assets/extractFileInfo.png";
@@ -61,10 +60,10 @@ const projects = [
     library: ["React Native"],
     description:
       "The Rilakkuma Mobile App is a React Native application designed for people to explore and learn more about my favorite characters. This mobile app offers various features, including comment sections, Q&A, and some descriptions about Rilakkuma.",
-    image: cake2,
+    image: mobile,
     githubUrl: "https://github.com/wongella123/rilakkuma",
     liveDemoUrl:
-      "https://drive.google.com/file/d/1l909aD7O7azjLFazdNlzJVqUAKrGV9gG/view?usp=sharing",
+      "https://drive.google.com/file/d/18IyYbtcoYCMi11l5gHYeobnKcWQ4qdSs/view?usp=sharing",
   },
   {
     title: "To Do List",
@@ -109,6 +108,12 @@ const Projects = () => {
     }
   };
 
+  const handleImageHover = (index) => {
+    const updatedProjects = [...filteredProjects];
+    updatedProjects[index].isHovered = !updatedProjects[index].isHovered;
+    setFilteredProjects(updatedProjects);
+  };
+
   return (
     <div className="projects-container">
       <h1>Projects❤️️</h1>
@@ -132,7 +137,10 @@ const Projects = () => {
             <img
               src={project.image}
               alt={project.title}
-              className="project-image"
+              // className="project-image"
+              className={`project-image ${project.isHovered ? "expanded" : ""}`}
+              onMouseEnter={() => handleImageHover(index)}
+              onMouseLeave={() => handleImageHover(index)}
             />
             <div className="project-details">
               <h2>{project.title}</h2>

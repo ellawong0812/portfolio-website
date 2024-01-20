@@ -23,11 +23,21 @@
   }
   
   .project-image {
-    width: 100%;
-    max-height: 200px;
+    /* width: 100%;
+    max-height: 200px; */
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project-image.expanded {
+    /* Add styles to expand the image on hover */
+    transform: scale(1.2);
+    
+
   }
   
   .project-details {
