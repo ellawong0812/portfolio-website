@@ -28,16 +28,7 @@ const Intro = () => {
 
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div className="pointing-emoji">👉</div>
-            <button
-              className="intro-button"
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1pEZnKZFBkdTtzdWsZoG51rSx5JMGhfIS/view?usp=sharing"
-                )
-              }
-            >
-              VIEW MY CV
-            </button>
+
             <button
               className="intro-button"
               onClick={() => window.open("https://github.com/ellawong0812")}

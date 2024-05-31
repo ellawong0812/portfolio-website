@@ -10,6 +10,7 @@ import life5 from "../Assets/life5.jpg";
 import life6 from "../Assets/life6.JPG";
 import azure from "../Assets/azure.png";
 import green from "../Assets/green.png";
+import PMIHK from "../Assets/PMIHK.jpeg";
 
 const About = () => {
   const images = [life1, life2, life3, life4, life5, life6];
@@ -44,16 +45,21 @@ const About = () => {
       <section className="about-section">
         <h2>Something about Me!👩‍💻</h2>
         <p>
-          With a passion for programming, I dedicate my spare time to honing my
-          coding skills and staying up-to-date with the latest industry trends.
+          With a <strong>passion for programming</strong>, I dedicate my spare
+          time to honing my coding skills and staying up-to-date with the latest
+          industry trends.
         </p>
         <p>
           Throughout my academic journey, I have consistently demonstrated a
-          strong aptitude for problem-solving and logical thinking, which has
-          fueled my enthusiasm for the field of information systems. My
-          coursework has provided me with a solid foundation in various
-          programming languages, database management, and system analysis,
-          enabling me to develop innovative solutions to complex challenges.
+          strong aptitude for
+          <strong> problem-solving and logical thinking</strong>, which has
+          fueled my enthusiasm for the field of information systems.{" "}
+        </p>
+        <p>
+          My coursework has provided me with a <strong>solid foundation</strong>{" "}
+          in various programming languages, database management, and system
+          analysis, enabling me to develop innovative solutions to complex
+          challenges.
         </p>
       </section>
 
@@ -78,26 +84,33 @@ const About = () => {
       </section>
 
       <section className="about-section">
-        <h2>Experience</h2>
+        <h2>Work Experience</h2>
         <ul>
-          <li>🔵 Microsoft Certification: Azure Fundamentals AZ-900</li>
-          <li>🔵 EY & Microsoft: Green Skills Passport Certification</li>
           <li>🔵 Software Engineer, Beijing YingKe Law Firm Tianjin Office</li>
-
-          <li>
-            🔵 Joint University Outstanding Marketing Award Session
-            2022-2023--Semi-final
-          </li>
         </ul>
       </section>
 
       <section className="about-section">
-        <h2>Certificates</h2>
+        <h2>Extracurricular Activities</h2>
+        <ul>
+          <li>🔵 PMIHK Project Management Case Competition 2024</li>
+          <li>
+            🔵 Joint University Outstanding Marketing Award Session
+            2022-2023--Semi-final
+          </li>
+          <img class="PMIHK" src={PMIHK} alt="PMIHK" />
+        </ul>
+      </section>
+
+      <section className="about-section">
+        <h2>Certification</h2>
         <div className="cert_container">
           <a href="https://www.credly.com/badges/23629085-fcca-454a-8abd-b09a3880a5ce/public_url">
             <img class="cert1" src={azure} alt="Azure" />
           </a>
+          <li>Microsoft Certification: Azure Fundamentals AZ-900</li>
           <img class="cert" src={green} alt="Green" />
+          <li>EY & Microsoft: Green Skills Passport Certification</li>
         </div>
       </section>
 
