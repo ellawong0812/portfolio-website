@@ -16,7 +16,7 @@
 .animate-class {
   animation: slideInFromLeft 1s ease;
   font-size: 30px;
-  color:#6D8ADC;
+  color:#3B58C6;
   font-family: 'Oswald';
 }
 
@@ -35,7 +35,7 @@
     display: inline-block;
     padding: 8px 8px;
     font-size: 14px;
-    background-color: #B0BFEC;
+    background-color: #8A9FEE;
     border: 1px solid #ddd;
     border-radius: 5px;
     color: #333;

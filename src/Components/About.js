@@ -11,6 +11,7 @@ import life6 from "../Assets/life6.JPG";
 import azure from "../Assets/azure.png";
 import green from "../Assets/green.png";
 import PMIHK from "../Assets/PMIHK.jpeg";
+import MTR2 from "../Assets/MTR2.png";
 
 const About = () => {
   const images = [life1, life2, life3, life4, life5, life6];
@@ -43,7 +44,7 @@ const About = () => {
   return (
     <div className="about-container">
       <section className="about-section">
-        <h2>Something about Me!👩‍💻</h2>
+        <h2>Something about Me! 👩‍💻</h2>
         <p>
           With a <strong>passion for programming</strong>, I dedicate my spare
           time to honing my coding skills and staying up-to-date with the latest
@@ -74,6 +75,7 @@ const About = () => {
           <li>Python</li>
           <li>JavaScript</li>
           <li>C++</li>
+          <li>Visual Basic</li>
           <li>SQLite</li>
           <li>MySQL</li>
           <li>React JS</li>
@@ -86,7 +88,9 @@ const About = () => {
       <section className="about-section">
         <h2>Work Experience</h2>
         <ul>
+          <li>🔵 Summer Intern, MTR Corporation Limited</li>
           <li>🔵 Software Engineer, Beijing YingKe Law Firm Tianjin Office</li>
+          <img class="MTR2" src={MTR2} alt="MTR2" />
         </ul>
       </section>
 
@@ -115,7 +119,7 @@ const About = () => {
       </section>
 
       <section className="about-section">
-        <h2>My School Life🥰</h2>
+        <h2>My School Life 🥰</h2>
         <ul>
           <li>
             🔵 Peer Mentor: Contributing to the school community and supporting

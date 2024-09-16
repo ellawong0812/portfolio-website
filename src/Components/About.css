@@ -25,6 +25,12 @@
   
 }
 
+.MTR2{
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
 .cert1 {
   width: 300px;
   height: 300px;
@@ -100,7 +106,7 @@
 }
 
 .skills-list li {
-  background-color: #3498db;
+  background-color: #3B58C6;
   color: #fff;
   padding: 8px 15px;
   border-radius: 20px;
