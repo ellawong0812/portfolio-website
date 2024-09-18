@@ -7,8 +7,21 @@ import extractFileInfo from "../Assets/extractFileInfo.png";
 import ToDoList from "../Assets/ToDoList.png";
 import ShootingGame from "../Assets/ShootingGame.png";
 import onlineShop from "../Assets/onlineShop.png";
+import TypingGame from "../Assets/TypingGame.png";
+import AYI from "../Assets/AYI.png";
 
 const projects = [
+  {
+    title: "Typing Game",
+    programmingLanguage: ["JavaScript, HTML, CSS"],
+    library: [""],
+    description:
+      "Developed a dynamic typing game using HTML, CSS, and JavaScript, featuring customizable modes, real-time scoring, and a competitive leaderboard.",
+    image: TypingGame,
+    githubUrl: "https://github.com/ellawong0812/TypingGame",
+    liveDemoUrl:
+      "https://drive.google.com/file/d/1uAWe1DCmjO_tmi8tAoooQ7Gz5zrBLnV5/view?usp=sharing",
+  },
   {
     title: "Web Application for Visualizing 2022 U.S. House Election Results",
     programmingLanguage: ["Python"],
@@ -16,7 +29,7 @@ const projects = [
     description:
       "Using BeautifulSoup and Selenium to do Web Scraping and Web Automation for extracting the US 2022 Election results. Also, using Dash, a Python framework for building analytical web applications, visualizing the results with various components",
     image: USElection,
-    githubUrl: "https://github.com/wongella123/USElectionAnalysis",
+    githubUrl: "https://github.com/ellawong0812/USElectionAnalysis",
     liveDemoUrl:
       "https://drive.google.com/file/d/14DFR8s5RwZhT8uGqf4SktMRzzp-TCtH9/view?usp=sharing",
   },
@@ -27,7 +40,7 @@ const projects = [
     description:
       "It allows users to extract file names and dates from a selected folder efficiently. The application provides an option to download the extracted data as a CSV file for further analysis.",
     image: extractFileInfo,
-    githubUrl: "https://github.com/wongella123/extract-file-YingKe-",
+    githubUrl: "https://github.com/ellawong0812/extract-file-YingKe-",
     liveDemoUrl:
       "https://drive.google.com/file/d/1He0ft1xyij3XCFHPuKnKb6AZduC0JcS6/view?usp=sharing",
   },
@@ -49,7 +62,7 @@ const projects = [
     description:
       "The interface includes a grid-based layout to represent the Tic Tac Toe board and interactive buttons for player moves. Developed an AI opponent using the minimax algorithm, providing an engaging and challenging gameplay experience.",
     image: tictactoe,
-    githubUrl: "https://github.com/wongella123/TicTacToe",
+    githubUrl: "https://github.com/ellawong0812/TicTacToe",
     liveDemoUrl:
       "https://drive.google.com/file/d/1Mz1t8VgI3WOHjjAzG9ngpeMhCxjfewE-/view?usp=sharing",
   },
@@ -61,7 +74,7 @@ const projects = [
     description:
       "The Rilakkuma Mobile App is a React Native application designed for people to explore and learn more about my favorite characters. This mobile app offers various features, including comment sections, Q&A, and some descriptions about Rilakkuma.",
     image: mobile,
-    githubUrl: "https://github.com/wongella123/rilakkuma",
+    githubUrl: "https://github.com/ellawong0812/rilakkuma",
     liveDemoUrl:
       "https://drive.google.com/file/d/18IyYbtcoYCMi11l5gHYeobnKcWQ4qdSs/view?usp=sharing",
   },
@@ -72,9 +85,20 @@ const projects = [
     description:
       "Developed a user-friendly To-Do List application enabling seamless input of tasks and activities.",
     image: ToDoList,
-    githubUrl: "https://github.com/wongella123/ToDoList",
+    githubUrl: "https://github.com/ellawong0812/ToDoList",
     liveDemoUrl:
       "https://drive.google.com/file/d/1BNWBqO1unlC3wQeYoagF0CRLwLgvasrK/view?usp=sharing",
+  },
+  {
+    title: "Ace Your Interview",
+    programmingLanguage: ["JavaScript"],
+    library: ["React"],
+    description:
+      "Using React to build a website such that user to get expert guidance and support to boost their career.",
+    image: AYI,
+    githubUrl: "https://github.com/ellawong0812/AceYourInterview",
+    liveDemoUrl:
+      "https://drive.google.com/file/d/1unGK3DvZLxiJq3pzuTE3hM1E9a3avWpL/view?usp=sharing",
   },
   {
     title: "Shooting Game",
@@ -83,7 +107,7 @@ const projects = [
     description:
       "The game features three challenging levels, with the highest difficulty level presenting moving spaceships that posed a significant challenge for players to successfully attack. Implemented a feature to store the game records in a text file after each session, allowing players to track their progress and review their cumulative records.",
     image: ShootingGame,
-    githubUrl: "https://github.com/wongella123/ShootingGame",
+    githubUrl: "https://github.com/ellawong0812/ShootingGame",
     liveDemoUrl:
       "https://drive.google.com/file/d/1vspQqG54rbaOEdOeaq1amv7gFOYsSgxn/view?usp=sharing",
   },

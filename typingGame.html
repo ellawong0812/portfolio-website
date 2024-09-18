@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Typing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #resetBtn {
+            background-color: orange;
+            border-radius: 30%;
+            height: 60px;
+        }
+
+        #resetBtn:hover {
+            background-color: rgb(231, 158, 22);
+
+        }
+
+        #modeBtn {
+            background-color: rgb(245, 146, 119);
+            height: 40px;
+        }
+
+        #modeBtn:hover {
+            background-color: rgb(244, 118, 83);
+        }
+
+        ::-moz-selection {
+            color: rgba(0, 0, 0, 1);
+        }
+
+        ::selection {
+            background: rgba(255, 255, 0, 0.5)
+        }
+
+        .game-container {
+            text-align: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #target {
+            font-size: 2rem;
+            margin: 1rem 0;
+            min-height: 3rem;
+        }
+
+        #input {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            width: 80%;
+            margin-bottom: 1rem;
+        }
+
+        #timer,
+        #wpm {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        #leaderboard {
+            margin-top: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button,
+        select {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+        }
+
+        #title {
+            color: rgb(0, 51, 255);
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #box {
+            background-color: rgb(204, 243, 243);
+            border-radius: 30%;
+        }
+
+        #leaderBoardTitle {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 51, 255);
+        }
+
+        #changeModeMessage {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-container">
+        <h1 id="title">Typing Game</h1>
+        <div>The words you need to type: </div>
+        <div id="target">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+        <input type="text" id="input" placeholder="Start typing" autocomplete="off">
+        <div id="box">
+            <div id="timer">Time: 0.00s</div>
+            <div id="wpm">WPM: 0</div>
+        </div>
+        <button id="resetBtn">Reset</button>
+
+        <div id="changeModeMessage">CHANGE the MODE by clicking the button below :) </div>
+        <button id="modeBtn">Mode: A-Z (Normal)</button>
+        <hr>
+        <div id="leaderboard">
+            <h2 id="leaderBoardTitle">Leaderboard</h2>
+            <select id="filterScores">
+                <option value="0">All</option>
+                <option value="5">Top 5</option>
+                <option value="10">Top 10</option>
+                <option value="20">Top 20</option>
+            </select>
+            <table id="leaderboardTable">
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>WPM</th>
+                    <th>Mode</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('input');
+        const timerDisplay = document.getElementById('timer');
+        const wpmDisplay = document.getElementById('wpm');
+        const targetDisplay = document.getElementById('target');
+        const leaderboardTable = document.getElementById('leaderboardTable');
+        const resetBtn = document.getElementById('resetBtn');
+        const modeBtn = document.getElementById('modeBtn');
+        const filterScores = document.getElementById('filterScores');
+
+        let startTime;
+        let currentIndex = 0;
+        let isGameActive = false;
+        let leaderboard = [];
+        let currentMode = 'A-Z (Normal)';
+        let currentTarget = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // Add these variables at the top of your script
+        let gameStarted = false;
+
+        const modes = {
+            'A-Z (Normal)': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            'Common Words (Easy)': 'THE AND YOU THAT IT WAS FOR ARE WITH',
+            'Pangram (Hard)': 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
+        };
+
+        // Sound effects
+        const keyPressSound = new Audio('https://www.soundjay.com/button/button-1.mp3');
+        const gameCompleteSound = new Audio('https://www.soundjay.com/button/button-17.mp3');
+
+        input.addEventListener('input', handleInput);
+        resetBtn.addEventListener('click', resetGame);
+        modeBtn.addEventListener('click', changeMode);
+        filterScores.addEventListener('change', updateLeaderboardDisplay);
+
+        function handleInput(e) {
+            const typedChar = e.target.value.slice(-1).toUpperCase();
+
+            if (!isGameActive) {
+                startGame();
+            }
+
+            if (isGameActive) {
+                if (typedChar === currentTarget[currentIndex].toUpperCase()) {
+                    keyPressSound.play();
+                    currentIndex++;
+                    updateDisplay();
+                    if (currentIndex === currentTarget.length) {
+                        endGame();
+                    }
+                } else {
+                    // Remove the incorrect character
+                    // I think this may not need, this can allow user to notify they type the wrong word
+                    // e.target.value = e.target.value.slice(0, -1);
+                }
+            }
+        }
+
+        function startGame() {
+            isGameActive = true;
+            startTime = new Date();
+            updateTimer();
+        }
+
+        function endGame() {
+            isGameActive = false;
+            const endTime = new Date();
+            const totalTime = (endTime - startTime) / 1000;
+            const wpm = calculateWPM(totalTime);
+            gameCompleteSound.play();
+
+            const playerName = prompt(`Congratulations! You finished in ${totalTime.toFixed(2)} seconds with ${wpm} WPM. Enter your name:`);
+            // the user must enter their name to prevent they forget entering the name ad lose the score
+            while (playerName == " ") {
+                playerName = prompt(`Congratulations! You finished in ${totalTime.toFixed(2)} seconds with ${wpm} WPM. Enter your name:`);
+            }
+            updateLeaderboard(playerName, totalTime, wpm, currentMode);
+
+            //if (playerName) {
+            //    updateLeaderboard(playerName, totalTime, wpm, currentMode);}
+
+            resetGame();
+        }
+
+        function updateTimer() {
+            if (isGameActive) {
+                const currentTime = new Date();
+                const elapsedTime = (currentTime - startTime) / 1000;
+                timerDisplay.textContent = `Time: ${elapsedTime.toFixed(2)}s`;
+                wpmDisplay.textContent = `WPM: ${calculateWPM(elapsedTime)}`;
+                requestAnimationFrame(updateTimer);
+            }
+        }
+
+        function calculateWPM(totalTimeInSeconds) {
+            const minutes = totalTimeInSeconds / 60;
+            const words = currentTarget.length / 5; // Assuming 5 characters per word
+            return Math.round(words / minutes);
+        }
+
+        function updateDisplay() {
+            const highlighted = currentTarget.slice(0, currentIndex);
+            const remaining = currentTarget.slice(currentIndex);
+            targetDisplay.innerHTML = `<span style="color: green;">${highlighted}</span>${remaining}`;
+        }
+
+        function resetGame() {
+            currentIndex = 0;
+            input.value = '';
+            isGameActive = false;
+            updateDisplay();
+            timerDisplay.textContent = 'Time: 0.00s';
+            wpmDisplay.textContent = 'WPM: 0';
+        }
+
+        function changeMode() {
+            const modeKeys = Object.keys(modes);
+            const currentModeIndex = modeKeys.indexOf(currentMode);
+            const nextModeIndex = (currentModeIndex + 1) % modeKeys.length;
+            currentMode = modeKeys[nextModeIndex];
+            currentTarget = modes[currentMode];
+            modeBtn.textContent = `Mode: ${currentMode}`;
+            resetGame();
+        }
+
+        function updateLeaderboard(name, time, wpm, mode) {
+            leaderboard.push({ name, time, wpm, mode });
+            leaderboard.sort((a, b) => a.time - b.time);
+            updateLeaderboardDisplay();
+        }
+
+        function updateLeaderboardDisplay() {
+            const filterValue = parseInt(filterScores.value);
+            const filteredLeaderboard = filterValue > 0 ? leaderboard.slice(0, filterValue) : leaderboard;
+
+            // Clear existing rows
+            while (leaderboardTable.rows.length > 1) {
+                leaderboardTable.deleteRow(1);
+            }
+
+            // Add new rows
+            filteredLeaderboard.forEach((entry, index) => {
+                const row = leaderboardTable.insertRow(-1);
+                row.insertCell(0).textContent = index + 1;
+                row.insertCell(1).textContent = entry.name;
+                row.insertCell(2).textContent = `${entry.time.toFixed(2)}s`;
+                row.insertCell(3).textContent = entry.wpm;
+                row.insertCell(4).textContent = entry.mode;
+            });
+        }
+
+        // Initialize the game
+        // resetGame();
+    </script>
+</body>
+
+</html>
