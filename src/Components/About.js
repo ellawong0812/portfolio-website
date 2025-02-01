@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
-import life1 from "../Assets/life1.JPG";
-import life2 from "../Assets/life2.png";
-import life3 from "../Assets/life3.jpg";
-import life4 from "../Assets/life4.jpg";
-import life5 from "../Assets/life5.jpg";
-import life6 from "../Assets/life6.JPG";
+import life7 from "../Assets/life7.JPG";
+import life8 from "../Assets/life8.png";
+import life9 from "../Assets/life9.JPG";
+import life10 from "../Assets/life10.JPG";
 import azure from "../Assets/azure.png";
 import green from "../Assets/green.png";
 import PMIHK from "../Assets/PMIHK.jpeg";
@@ -13,7 +11,7 @@ import MTR2 from "../Assets/MTR2.png";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 
 const About = () => {
-  const images = [life1, life2, life3, life4, life5, life6];
+  const images = [PMIHK, MTR2, life7, life8, life9, life10];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const previousImage = () => {
@@ -91,7 +89,6 @@ const About = () => {
             Tianjin Office (2023 Summer)
           </li>
         </ul>
-        <img className="experience-img" src={MTR2} alt="Work Experience" />
       </section>
 
       <section className="about-section">
@@ -103,7 +100,6 @@ const About = () => {
             2022-2023
           </li>
         </ul>
-        <img className="competition-img" src={PMIHK} alt="Competition" />
       </section>
 
       <section className="about-section">
