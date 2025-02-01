@@ -29,27 +29,44 @@
     object-fit: cover;
     margin-right: 10px;
   }
+
+ 
   
 
   .intro-button {
-    display: inline-block;
-    padding: 8px 8px;
-    font-size: 14px;
-    background-color: #8A9FEE;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-    margin-right: 20px;
+    background: #3B58C6;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.2s;
   }
   
   .intro-button:hover {
-    background-color: #6D8ADC;
+    background: #f1f1f1;
+    color:#3B58C6;
+    transform: scale(1.05);
   }
 
 
   .pointing-emoji {
-    font-size: 24px;
-    margin-right: 5px;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    animation: bounce 1.5s infinite;
   }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  

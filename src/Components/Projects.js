@@ -140,6 +140,8 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
+      <br />
+      <br />
       <h1>Projects❤️️</h1>
       <div className="language-dropdown">
         <label htmlFor="language-select">Select a Programming Language:</label>

@@ -10,41 +10,62 @@ const Academic = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(myGradeFile);
-
-        // Convert the response to an ArrayBuffer
         const data = await response.arrayBuffer();
         const workbook = XLSX.read(data, { type: "array" });
 
-        // Access the first sheet in the Excel file
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-        // Update the component's state with the fetched JSON data
+
         setExcelData(jsonData);
       } catch (error) {
         console.log("Error reading Excel file:", error);
       }
     };
 
-    fetchData(); // Invoke fetchData function immediately after the component mounts
+    fetchData();
   }, []);
 
   return (
     <div>
-      <h1 className="result">2023/2024 Fall Semester: Dean’s List</h1>
-      <h1 className="result">TGA: 3.717</h1>
-      <hr></hr>
-      <h1 className="centered">Course Highlights💫</h1>
-      <table>
-        <tbody>
-          {excelData.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-              {row.map((cell, cellIndex) => (
-                <td key={cellIndex}>{cell}</td>
+      <br />
+      <br />
+      <div className="academic-container">
+        <div className="academic-header">
+          <h1 className="highlight">📜 Academic Achievements</h1>
+          <p className="sub-text">
+            My academic journey and achievements at HKUST
+          </p>
+        </div>
+
+        <div className="achievements">
+          <h2>🎓 2023/2024 Fall Semester: Dean’s List</h2>
+          <p className="tga">
+            TGA: <span>3.717</span>
+          </p>
+
+          <h2>🎓 2024/2025 Fall Semester: Dean’s List</h2>
+          <p className="tga">
+            TGA: <span>3.731</span>
+          </p>
+        </div>
+
+        <hr className="divider" />
+
+        <h2 className="course-title">💫 Course Highlights</h2>
+        <div className="table-container">
+          <table className="academic-table">
+            <tbody>
+              {excelData.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  {row.map((cell, cellIndex) => (
+                    <td key={cellIndex}>{cell}</td>
+                  ))}
+                </tr>
               ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

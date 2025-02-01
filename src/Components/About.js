@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./About.css"; // Import the CSS file
-//import { Carousel } from 'react-responsive-carousel';
-//import Carousel from 'react-bootstrap/Carousel';
+import "./About.css";
 import life1 from "../Assets/life1.JPG";
 import life2 from "../Assets/life2.png";
 import life3 from "../Assets/life3.jpg";
@@ -12,10 +10,12 @@ import azure from "../Assets/azure.png";
 import green from "../Assets/green.png";
 import PMIHK from "../Assets/PMIHK.jpeg";
 import MTR2 from "../Assets/MTR2.png";
+import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 
 const About = () => {
   const images = [life1, life2, life3, life4, life5, life6];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const previousImage = () => {
     setCurrentImageIndex(
       currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1
@@ -28,47 +28,40 @@ const About = () => {
     );
   };
 
-  //automatically switch to the next image at a specified time interval
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextImage();
-    }, 1000);
-    return () => {
-      //clean up the interval when the component unmounts or when the currentImageIndex dependency changes
-      clearInterval(interval);
-    };
+    const interval = setInterval(nextImage, 3000);
+    return () => clearInterval(interval);
   }, [currentImageIndex]);
-  //the effect will be re-run whenever the currentImageIndex value changes
-  //the interval will be cleared and set up again with the updated value.
 
   return (
     <div className="about-container">
       <section className="about-section">
-        <h2>Something about Me! 👩‍💻</h2>
+        <h2>About Me 👩‍💻</h2>
         <p>
-          With a <strong>passion for programming</strong>, I dedicate my spare
-          time to honing my coding skills and staying up-to-date with the latest
-          industry trends.
+          I am a dedicated and passionate software developer with a strong
+          foundation in{" "}
+          <strong>Information Systems and Artificial Intelligence</strong>. My
+          journey in tech has been driven by curiosity, problem-solving, and
+          continuous learning.
         </p>
         <p>
-          Throughout my academic journey, I have consistently demonstrated a
-          strong aptitude for
-          <strong> problem-solving and logical thinking</strong>, which has
-          fueled my enthusiasm for the field of information systems.{" "}
+          I thrive on <strong>building innovative solutions</strong> that
+          enhance efficiency and optimize user experiences. My expertise spans
+          across various programming languages, database management, and system
+          architecture.
         </p>
         <p>
-          My coursework has provided me with a <strong>solid foundation</strong>{" "}
-          in various programming languages, database management, and system
-          analysis, enabling me to develop innovative solutions to complex
-          challenges.
+          In addition to my technical skills, I am an{" "}
+          <strong>avid learner</strong> who actively participates in
+          competitions and certification programs to stay ahead in the evolving
+          tech landscape.
         </p>
       </section>
 
       <section className="about-section">
-        <h2>Skills</h2>
+        <h2>Skills & Expertise</h2>
         <p>
-          Here are some of my skills on which I have been working on for the
-          past year.
+          Here are some of the technologies and tools I have experience with:
         </p>
         <ul className="skills-list">
           <li>Java</li>
@@ -76,78 +69,69 @@ const About = () => {
           <li>JavaScript</li>
           <li>C++</li>
           <li>Visual Basic</li>
-          <li>SQLite</li>
-          <li>MySQL</li>
-          <li>React JS</li>
-          <li>React Native</li>
-          <li>HTML</li>
-          <li>CSS</li>
+          <li>SQLite & MySQL</li>
+          <li>React JS & React Native</li>
+          <li>HTML & CSS</li>
         </ul>
       </section>
 
       <section className="about-section">
         <h2>Work Experience</h2>
         <ul>
-          <li>🔵 Summer Intern, MTR Corporation Limited</li>
-          <li>🔵 Software Engineer, Beijing YingKe Law Firm Tianjin Office</li>
-          <img class="MTR2" src={MTR2} alt="MTR2" />
-        </ul>
-      </section>
-
-      <section className="about-section">
-        <h2>Extracurricular Activities</h2>
-        <ul>
-          <li>🔵 PMIHK Project Management Case Competition 2024</li>
           <li>
-            🔵 Joint University Outstanding Marketing Award Session
-            2022-2023--Semi-final
+            🔵 <strong>Programmer</strong> - iGears Technology Limited (2024
+            Winter)
           </li>
-          <img class="PMIHK" src={PMIHK} alt="PMIHK" />
+          <li>
+            🔵 <strong>Summer Intern</strong> - MTR Corporation Limited (2024
+            Summerr)
+          </li>
+          <li>
+            🔵 <strong>Software Engineer</strong> - Beijing YingKe Law Firm
+            Tianjin Office (2023 Summer)
+          </li>
         </ul>
+        <img className="experience-img" src={MTR2} alt="Work Experience" />
       </section>
 
       <section className="about-section">
-        <h2>Certification</h2>
-        <div className="cert_container">
+        <h2>Competitions & Achievements</h2>
+        <ul>
+          <li>🏆 Finalist - PMIHK Project Management Case Competition 2024</li>
+          <li>
+            🏆 Semi-finalist - Joint University Outstanding Marketing Award
+            2022-2023
+          </li>
+        </ul>
+        <img className="competition-img" src={PMIHK} alt="Competition" />
+      </section>
+
+      <section className="about-section">
+        <h2>Certifications</h2>
+        <div className="cert-container">
           <a href="https://www.credly.com/badges/23629085-fcca-454a-8abd-b09a3880a5ce/public_url">
-            <img class="cert1" src={azure} alt="Azure" />
+            <img className="cert-img" src={azure} alt="Azure Certification" />
           </a>
-          <li>Microsoft Certification: Azure Fundamentals AZ-900</li>
-          <img class="cert" src={green} alt="Green" />
-          <li>EY & Microsoft: Green Skills Passport Certification</li>
+          <p>Microsoft Certification: Azure Fundamentals AZ-900</p>
+          <img className="cert-img" src={green} alt="Green Skills Passport" />
+          <p>EY & Microsoft: Green Skills Passport Certification</p>
         </div>
       </section>
 
       <section className="about-section">
-        <h2>My School Life 🥰</h2>
-        <ul>
-          <li>
-            🔵 Peer Mentor: Contributing to the school community and supporting
-            my mentees in their transition to university life. By sharing my
-            personal experiences and offering practical tips, I enable them to
-            navigate challenges, manage their time effectively, and make the
-            most of available resources.
-          </li>
-          <li>
-            🔵 Volunteer with HKUST Connect: Actively engage in various
-            community work initiatives, such as the Bread Run and Feeding Hong
-            Kong Warehouse Session organized by Feeding Hong Kong{" "}
-          </li>
-          <li>
-            🔵 Spark Global Events: Participating in different kind of
-            activities such as cultural tours and social events with non-local
-            students{" "}
-          </li>
-        </ul>
-
-        <div className="imageSlider">
-          {/* <button onClick={previousImage}>Previous</button> */}
+        <h2>Gallery</h2>
+        <div className="image-slider">
+          <button className="slider-button" onClick={previousImage}>
+            <ArrowLeft size={24} />
+          </button>
           <img
-            className="sliderImage"
+            className="slider-image"
             src={images[currentImageIndex]}
-            alt={`Image ${currentImageIndex + 1}`}
+            alt="Life Moments"
           />
-          {/* <button onClick={nextImage}>Next</button> */}
+          <button className="slider-button" onClick={nextImage}>
+            <ArrowRight size={24} />
+          </button>
         </div>
       </section>
     </div>

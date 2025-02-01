@@ -1,12 +1,15 @@
 import "./App.css";
-import Intro from "./Components/Intro";
 import React, { useState, useEffect } from "react";
-import About from "./Components/About";
-import Projects from "./Components/Projects";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import Intro from "./Components/Intro";
+import About from "./Components/About";
+import Projects from "./Components/Projects";
 import Academic from "./Components/Academic";
 import Footer from "./Components/Footer";
+import MySchoolLife from "./Components/MySchoolLife";
+import BookReview from "./Components/BookReview";
+import { ArrowUp } from "@phosphor-icons/react";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,36 +22,37 @@ function App() {
   }, []);
 
   const handleScroll = () => {
-    // calculates the current scroll position
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     setIsVisible(scrollTop > 300);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <Router basename="/portfolio-website">
-      <div className="App">
+      <div className="app-container">
         <Navbar />
-        <div className="AppBody">
+        <div className="app-body">
           <Routes>
             <Route path="/" element={<Intro />} />
             <Route path="/about" element={<About />} />
+            <Route path="/school" element={<MySchoolLife />} />
+            <Route path="/book" element={<BookReview />} />
             <Route path="/academic" element={<Academic />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
+
+        {/* Smooth Scroll-to-Top Button */}
         <button
-          className={`move-to-top-button ${isVisible ? "visible" : ""}`}
+          className={`scroll-to-top ${isVisible ? "show" : ""}`}
           onClick={scrollToTop}
         >
-          Move to Top
+          <ArrowUp size={24} weight="bold" />
         </button>
+
         <Footer />
       </div>
     </Router>

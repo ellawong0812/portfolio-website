@@ -1,32 +1,67 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-    margin: 0px;
+  background-color: #f8f9fa;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
-.AppBody {
-    margin-left: 15%;
-    margin-right: 15%;
-    padding-top: 60px
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.move-to-top-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #8A9FEE;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .move-to-top-button.visible {
-    opacity: 1;
+.app-body {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #1558b0;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-body {
+    padding: 20px;
   }
 
-  p{
-
-    margin-bottom: 32px;
-    line-height: 1.58;
+  .scroll-to-top {
+    width: 45px;
+    height: 45px;
   }
+}

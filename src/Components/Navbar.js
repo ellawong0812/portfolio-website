@@ -6,24 +6,54 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <nav className="navbar__nav">
+        <div className="navbar__logo">
+          <NavLink to="/" className="navbar__brand">
+            Home
+          </NavLink>
+        </div>
         <ul className="navbar__menu">
           <li className="navbar__item">
-            <NavLink to="/" className="navbar__link">
-              Introduction
+            <NavLink
+              to="/about"
+              className="navbar__link"
+              activeClassName="active"
+            >
+              About
             </NavLink>
           </li>
           <li className="navbar__item">
-            <NavLink to="/about" className="navbar__link">
-              About Me
+            <NavLink
+              to="/school"
+              className="navbar__link"
+              activeClassName="active"
+            >
+              Campus Life
             </NavLink>
           </li>
           <li className="navbar__item">
-            <NavLink to="/academic" className="navbar__link">
-              Academic
+            <NavLink
+              to="/book"
+              className="navbar__link"
+              activeClassName="active"
+            >
+              Book Insights
             </NavLink>
           </li>
           <li className="navbar__item">
-            <NavLink to="/projects" className="navbar__link">
+            <NavLink
+              to="/academic"
+              className="navbar__link"
+              activeClassName="active"
+            >
+              Academic Journey
+            </NavLink>
+          </li>
+          <li className="navbar__item">
+            <NavLink
+              to="/projects"
+              className="navbar__link"
+              activeClassName="active"
+            >
               Projects
             </NavLink>
           </li>
