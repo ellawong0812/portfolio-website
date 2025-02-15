@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.81f8210c.css",
-    "main.js": "/portfolio-website/static/js/main.1d470026.js",
+    "main.css": "/portfolio-website/static/css/main.3c92a611.css",
+    "main.js": "/portfolio-website/static/js/main.edb22ac6.js",
     "static/js/787.cf482a7c.chunk.js": "/portfolio-website/static/js/787.cf482a7c.chunk.js",
+    "static/media/life9.JPG": "/portfolio-website/static/media/life9.1cb5e896a76e1a8fa396.JPG",
+    "static/media/life10.JPG": "/portfolio-website/static/media/life10.f8cfd95faf5c14d6fe99.JPG",
     "static/media/life2.png": "/portfolio-website/static/media/life2.a63a78c70529b6084930.png",
     "static/media/MTR2.png": "/portfolio-website/static/media/MTR2.28ce25c75c3c06df533d.png",
+    "static/media/life8.png": "/portfolio-website/static/media/life8.8be86c81859ba21d4fad.png",
     "static/media/life6.JPG": "/portfolio-website/static/media/life6.a5ba349706302f6b8cdd.JPG",
     "static/media/green.png": "/portfolio-website/static/media/green.5d29be14b65238d41114.png",
     "static/media/USElection.png": "/portfolio-website/static/media/USElection.e85fc6bf52f39c38c616.png",
@@ -20,17 +23,19 @@
     "static/media/azure.png": "/portfolio-website/static/media/azure.93926ec23935b00fc7da.png",
     "static/media/PMIHK.jpeg": "/portfolio-website/static/media/PMIHK.94575f0c6c8596e22abc.jpeg",
     "static/media/life1.JPG": "/portfolio-website/static/media/life1.23e4f357ea88de51929f.JPG",
+    "static/media/volunteertogether.png": "/portfolio-website/static/media/volunteertogether.50a7002d89e21ad29cf3.png",
     "static/media/ToDoList.png": "/portfolio-website/static/media/ToDoList.2d56f6dad2be5a4903bc.png",
     "static/media/TypingGame.png": "/portfolio-website/static/media/TypingGame.5d34f7980701d03fcaa4.png",
+    "static/media/life7.JPG": "/portfolio-website/static/media/life7.21827a600847f4a1976b.JPG",
     "static/media/life3.jpg": "/portfolio-website/static/media/life3.44e50e4ed28bf27fcc3f.jpg",
-    "static/media/My_Grade.xlsx": "/portfolio-website/static/media/My_Grade.c6c28beec2f54783a652.xlsx",
+    "static/media/My_Grade.xlsx": "/portfolio-website/static/media/My_Grade.c889ff81babe7d4cddda.xlsx",
     "index.html": "/portfolio-website/index.html",
-    "main.81f8210c.css.map": "/portfolio-website/static/css/main.81f8210c.css.map",
-    "main.1d470026.js.map": "/portfolio-website/static/js/main.1d470026.js.map",
+    "main.3c92a611.css.map": "/portfolio-website/static/css/main.3c92a611.css.map",
+    "main.edb22ac6.js.map": "/portfolio-website/static/js/main.edb22ac6.js.map",
     "787.cf482a7c.chunk.js.map": "/portfolio-website/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81f8210c.css",
-    "static/js/main.1d470026.js"
+    "static/css/main.3c92a611.css",
+    "static/js/main.edb22ac6.js"
   ]
 }
