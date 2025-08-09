@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.3c92a611.css",
-    "main.js": "/portfolio-website/static/js/main.edb22ac6.js",
+    "main.css": "/portfolio-website/static/css/main.ab1b0e3d.css",
+    "main.js": "/portfolio-website/static/js/main.a7035837.js",
     "static/js/787.cf482a7c.chunk.js": "/portfolio-website/static/js/787.cf482a7c.chunk.js",
     "static/media/life9.JPG": "/portfolio-website/static/media/life9.1cb5e896a76e1a8fa396.JPG",
     "static/media/life10.JPG": "/portfolio-website/static/media/life10.f8cfd95faf5c14d6fe99.JPG",
@@ -16,26 +16,31 @@
     "static/media/AYI.png": "/portfolio-website/static/media/AYI.779d84cc526f3d41aa0c.png",
     "static/media/life4.jpg": "/portfolio-website/static/media/life4.ebce458d94f8f1e6cb33.jpg",
     "static/media/mobile.png": "/portfolio-website/static/media/mobile.40d8b04ce3c1e1857736.png",
+    "static/media/COMP search engine.png": "/portfolio-website/static/media/COMP search engine.bf93661b67fc5f87d2aa.png",
     "static/media/onlineShop.png": "/portfolio-website/static/media/onlineShop.c11d902ee75b598d7ac6.png",
     "static/media/life5.jpg": "/portfolio-website/static/media/life5.907365667efd02ef5d69.jpg",
+    "static/media/smartEat.png": "/portfolio-website/static/media/smartEat.9ef4a8d833fea93d1439.png",
+    "static/media/FinTech.png": "/portfolio-website/static/media/FinTech.80fb0d93b739a2aedafa.png",
     "static/media/My_image.JPG": "/portfolio-website/static/media/My_image.f280f62a4c7c8e5a465c.JPG",
     "static/media/tictactoe.png": "/portfolio-website/static/media/tictactoe.0da7f2289c2d3a895ec0.png",
     "static/media/azure.png": "/portfolio-website/static/media/azure.93926ec23935b00fc7da.png",
     "static/media/PMIHK.jpeg": "/portfolio-website/static/media/PMIHK.94575f0c6c8596e22abc.jpeg",
+    "static/media/mood.png": "/portfolio-website/static/media/mood.5a3cb430281fdf25e36a.png",
     "static/media/life1.JPG": "/portfolio-website/static/media/life1.23e4f357ea88de51929f.JPG",
     "static/media/volunteertogether.png": "/portfolio-website/static/media/volunteertogether.50a7002d89e21ad29cf3.png",
     "static/media/ToDoList.png": "/portfolio-website/static/media/ToDoList.2d56f6dad2be5a4903bc.png",
+    "static/media/ML.png": "/portfolio-website/static/media/ML.3dce971b0af0e96ecb7e.png",
     "static/media/TypingGame.png": "/portfolio-website/static/media/TypingGame.5d34f7980701d03fcaa4.png",
     "static/media/life7.JPG": "/portfolio-website/static/media/life7.21827a600847f4a1976b.JPG",
     "static/media/life3.jpg": "/portfolio-website/static/media/life3.44e50e4ed28bf27fcc3f.jpg",
-    "static/media/My_Grade.xlsx": "/portfolio-website/static/media/My_Grade.c889ff81babe7d4cddda.xlsx",
+    "static/media/My_Grade.xlsx": "/portfolio-website/static/media/My_Grade.9d9d33bbe5e1d9dd36db.xlsx",
     "index.html": "/portfolio-website/index.html",
-    "main.3c92a611.css.map": "/portfolio-website/static/css/main.3c92a611.css.map",
-    "main.edb22ac6.js.map": "/portfolio-website/static/js/main.edb22ac6.js.map",
+    "main.ab1b0e3d.css.map": "/portfolio-website/static/css/main.ab1b0e3d.css.map",
+    "main.a7035837.js.map": "/portfolio-website/static/js/main.a7035837.js.map",
     "787.cf482a7c.chunk.js.map": "/portfolio-website/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c92a611.css",
-    "static/js/main.edb22ac6.js"
+    "static/css/main.ab1b0e3d.css",
+    "static/js/main.a7035837.js"
   ]
 }
