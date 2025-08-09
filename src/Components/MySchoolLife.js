@@ -31,7 +31,7 @@ const MySchoolLife = () => {
 
   return (
     <div className="schoollife-container">
-      <h2>My University Journey 🎓</h2>
+      <h1 style={{ color: "#1a73e8" }}>My University Journey 🎓</h1>
       <p>
         My university experience at <strong>HKUST</strong> has been an exciting
         blend of academics, mentorship, and community involvement. I have had

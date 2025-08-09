@@ -31,7 +31,7 @@ const Academic = () => {
       <br />
       <div className="academic-container">
         <div className="academic-header">
-          <h1 className="highlight">📜 Academic Achievements</h1>
+          <h1 className="highlight">Academic Achievements 📜</h1>
           <p className="sub-text">
             My academic journey and achievements at HKUST
           </p>

@@ -9,8 +9,46 @@ import ShootingGame from "../Assets/ShootingGame.png";
 import onlineShop from "../Assets/onlineShop.png";
 import TypingGame from "../Assets/TypingGame.png";
 import AYI from "../Assets/AYI.png";
+import volunteerTogether from "../Assets/volunteertogether.png";
+import SearchEngine from "../Assets/COMP search engine.png";
+import ML from "../Assets/ML.png";
+import FinTech from "../Assets/FinTech.png";
+import mood from "../Assets/mood.png";
+import eat from "../Assets/smartEat.png";
 
 const projects = [
+  {
+    title: "Customer Churn Prediction",
+    programmingLanguage: ["Python"],
+    library: [""],
+    description:
+      "Predict customer churn using machine learning to help businesses identify at-risk customers and improve retention strategies. We approach it as a binary classification problem using models like logistic regression and decision trees on a bank customer dataset. ",
+    image: ML,
+    githubUrl: "https://github.com/ellawong0812/BusinessAnalysis",
+    liveDemoUrl: null,
+  },
+  {
+    title: "Stock Prediction Analysis",
+    programmingLanguage: ["Python"],
+    library: [
+      "Numpy, Pandas, Scikit-learn, Requests-html, Pytorch, Transformers, yfinance, Matplotlib, Tensorflow, Keras",
+    ],
+    description:
+      "The model leverages news sentiment analysis and historical stock data to predict S&P 500 stock prices. ",
+    image: FinTech,
+    githubUrl: "https://github.com/ellawong0812/SearchEngine",
+    liveDemoUrl: "https://youtu.be/9pis_ANCQcI?si=Gx_j9n28ebapCMuR",
+  },
+  {
+    title: "Search Engine",
+    programmingLanguage: ["Java, HTML, CSS"],
+    library: [""],
+    description:
+      "This project is a web search engine developed using Java. It includes a web interface hosted on an Apache Tomcat server.",
+    image: SearchEngine,
+    githubUrl: "https://github.com/ellawong0812/SearchEngine",
+    liveDemoUrl: "https://youtu.be/7kT7Tma2G3Q",
+  },
   {
     title: "Typing Game",
     programmingLanguage: ["JavaScript, HTML, CSS"],
@@ -111,6 +149,36 @@ const projects = [
     liveDemoUrl:
       "https://drive.google.com/file/d/1vspQqG54rbaOEdOeaq1amv7gFOYsSgxn/view?usp=sharing",
   },
+  {
+    title: "Volunteer Together",
+    programmingLanguage: ["Python"],
+    library: [],
+    description:
+      "Volunteer-Together is a platform designed to connect teenagers with volunteer opportunities, requiring registration for access where they can easily browse, search, bookmark, and enroll in activities with clearly defined restrictions and track their enrollment history. Managers oversee the system by maintaining activity details, monitoring operations via an informative dashboard with analytics, and reviewing member feedback, while administrators manage roll calls, handle activity cancellations, and update member participation statuses.",
+    image: volunteerTogether,
+    githubUrl: "https://github.com/ellawong0812/Volunteer-Together",
+    liveDemoUrl: null,
+  },
+  {
+    title: "Smart Eat System",
+    programmingLanguage: ["JavaScript, SQLite"],
+    library: ["Node.js, Express.js"],
+    description:
+      "The Smart Eat System is a nutrition management application designed to help users track their daily nutritional intake while providing administrative tools for generating reports and managing food data. This system empowers individuals to monitor their dietary habits and allows administrators to oversee and analyze user data effectively.",
+    image: eat,
+    githubUrl: "https://github.com/ellawong0812/SmartEatSystem",
+    liveDemoUrl: null,
+  },
+  {
+    title: "Mood Recipe Web",
+    programmingLanguage: ["JavaScript, SQLite"],
+    library: ["Node.js, Express.js"],
+    description:
+      "A simple web application that allows users to generate and download recipes based on their mood. Admins can add, edit, and manage recipes. The app provides role-based access control (User/Admin) for different functionalities.",
+    image: mood,
+    githubUrl: "https://github.com/ellawong0812/MoodRecipeWeb",
+    liveDemoUrl: "https://youtu.be/l3feiETRWvg",
+  },
 ];
 
 const Projects = () => {
@@ -142,7 +210,7 @@ const Projects = () => {
     <div className="projects-container">
       <br />
       <br />
-      <h1>Projects❤️️</h1>
+      <h1 style={{ color: "#1a73e8" }}>Projects❤️️</h1>
       <div className="language-dropdown">
         <label htmlFor="language-select">Select a Programming Language:</label>
         <select
@@ -169,7 +237,7 @@ const Projects = () => {
               onMouseLeave={() => handleImageHover(index)}
             />
             <div className="project-details">
-              <h2>{project.title}</h2>
+              <h3>{project.title}</h3>
               <div className="programming-language">
                 {project.programmingLanguage}
               </div>
@@ -189,13 +257,18 @@ const Projects = () => {
                 >
                   View on GitHub
                 </a>
-                <a
-                  href={project.liveDemoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Demo Video
-                </a>
+                <br />
+                {project.liveDemoUrl ? (
+                  <a
+                    href={project.liveDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Demo Video
+                  </a>
+                ) : (
+                  <span className="text-muted">Demo Not Available</span>
+                )}
               </div>
             </div>
           </div>

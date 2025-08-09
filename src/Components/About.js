@@ -34,7 +34,7 @@ const About = () => {
   return (
     <div className="about-container">
       <section className="about-section">
-        <h2>About Me 👩‍💻</h2>
+        <h1 style={{ color: "#1a73e8" }}>About Me 👩‍💻</h1>
         <p>
           I am a dedicated and passionate software developer with a strong
           foundation in{" "}
@@ -43,14 +43,14 @@ const About = () => {
           continuous learning.
         </p>
         <p>
-          I thrive on <strong>building innovative solutions</strong> that
-          enhance efficiency and optimize user experiences. My expertise spans
-          across various programming languages, database management, and system
+          I enjoy <strong>building innovative solutions</strong> that improve
+          efficiency and optimize user experiences. My expertise spans across
+          various programming languages, database management, and system
           architecture.
         </p>
         <p>
           In addition to my technical skills, I am an{" "}
-          <strong>avid learner</strong> who actively participates in
+          <strong>active learner</strong> who actively participates in
           competitions and certification programs to stay ahead in the evolving
           tech landscape.
         </p>
@@ -76,6 +76,15 @@ const About = () => {
       <section className="about-section">
         <h2>Work Experience</h2>
         <ul>
+          <li>
+            🔵 <strong>ITSO Department Student Intern</strong> - The Hong Kong
+            University of Science and Technology (2025 - 2026)
+          </li>
+          <li>
+            🔵 <strong>IT Department Summer Intern</strong> - The Hong Kong
+            Jockey Club (2025 Summer)
+          </li>
+
           <li>
             🔵 <strong>Programmer</strong> - iGears Technology Limited (2024
             Winter)

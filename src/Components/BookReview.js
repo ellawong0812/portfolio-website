@@ -91,7 +91,7 @@ const books = [
 const BookReview = () => {
   return (
     <div className="book-review-container">
-      <h1 style={{ color: "#1a73e8" }}>📚 BOOK SHARING</h1>
+      <h1 style={{ color: "#1a73e8" }}>Book Sharing 📚 </h1>
       <p className="intro-text">
         Besides programming, I have a deep passion for reading. Books provide me
         with new perspectives, insights, and inspiration. Here are some of the

@@ -1,6 +1,6 @@
 .about-container {
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
   padding: 40px 20px;
   background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -17,11 +17,18 @@ ul {
   margin: 0; /* Remove margins */
 }
 
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a73e8;
+  margin-bottom: 20px;
+}
+
 h2 {
   font-size: 24px;
   color: #1a73e8;
   margin-bottom: 10px;
-  text-transform: uppercase;
+  
 }
 
 p {
